@@ -10,20 +10,22 @@ const routest = require('./routes/task.js');
 //setting port
 
 app.engine('html', require('ejs').renderFile);
-app.set('views',path.join(__dirname,'views'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('port', process.env.PORT || 3000);
-app.set('view engine','ejs');
+app.set('view engine', 'ejs');
 
 
 //middleware
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({
+  extended: false
+}));
 app.use(express.json());
 app.use(cors());
 //routes
 app.use(routes);
-app.use('/api',routest);
+app.use('/api', routest);
 
 
 app.listen(app.get('port'), () => {
-   console.log('server on port 3000');
+  console.log('server on port 3000');
 });
