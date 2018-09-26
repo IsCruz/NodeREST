@@ -1,0 +1,35 @@
+{
+  "name": "todo_rest",
+  "version": "1.0.0",
+  "description": "A node REST API for angular exercise",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsCruz/NodeREST.git"
+  },
+  "keywords": [
+    "Node",
+    "REST",
+    "back-end"
+  ],
+  "author": "Israel Cruz I.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IsCruz/NodeREST/issues"
+  },
+  "homepage": "https://github.com/IsCruz/NodeREST#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "mongojs": "^2.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
