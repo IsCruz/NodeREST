@@ -58,7 +58,7 @@ router.put('/tasks/:id', (req, res, next) => {
   } else {
     db.task.update({
       _id: mongojs.ObjectId(req.params.id)
-    }, (err, result) => {
+    }, updateTask, (err, result) => {
       if (err) return next(err);
       res.json(result);
     });
