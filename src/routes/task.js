@@ -34,7 +34,7 @@ router.post('/tasks', (req, res, next) => {
 });
 
 router.delete('/tasks/:id', (req, res, next) => {
-  db.task.findOne({
+  db.task.remove({
     _id: mongojs.ObjectId(req.params.id)
   }, (err, result) => {
     if (err) return next(err);

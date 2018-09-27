@@ -25,6 +25,10 @@ app.use(cors());
 app.use(routes);
 app.use('/api', routest);
 
+//static files
+//app.use(express.static(path.join(__dirname, 'dist')));
+
+
 
 app.listen(app.get('port'), () => {
   console.log('server on port 3000');
